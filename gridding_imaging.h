@@ -3,7 +3,7 @@ Start date: 01/12/2022
 End date: 01/12/2022
 
 Notes:
-- Has the gridding kernel defined in CUDA. 
+- Has the gridding kernel (gridding_imaging_cuda) defined in CUDA. 
 
 References: 
 https://stackoverflow.com/questions/17489017/can-we-declare-a-variable-of-type-cufftcomplex-in-side-a-kernel
@@ -15,7 +15,7 @@ https://stackoverflow.com/questions/17489017/can-we-declare-a-variable-of-type-c
 // So that it recognises: blockIdx
 #include "device_launch_parameters.h"
 
-// Cuda kernal: gridding and cuFFT 
+// gridding kernal
 __global__ void gridding_imaging_cuda(float *u_cuda, float *v_cuda, 
                                       double wavelength_cuda, int image_size_cuda, double delta_u_cuda, double delta_v_cuda, 
                                       int n_pixels_cuda, int center_x_cuda, int center_y_cuda, int is_odd_x_cuda, int is_odd_y_cuda,
