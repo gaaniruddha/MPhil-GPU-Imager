@@ -2,11 +2,9 @@
 gridding + imaging in cuda
 Start date: 01/12/2022
 End date: 01/12/2022
-(Expected: 15/12/2022) 
 
-Additional notes: 
+Notes: 
 - This has the basic version of the entire GPU Imager, which includes both cuFFT + gridding() 
-
 */ 
 
 // Header files 
