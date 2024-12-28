@@ -395,55 +395,13 @@ void CPacerImager::gridding_dirty_image( CBgFits& fits_vis_real, CBgFits& fits_v
    }   
 
   // Saving gridding() output files 
-  if( CPacerImager::m_SaveFilesLevel >= SAVE_FILES_DEBUG )
-  {
-     char uv_grid_re_name[1024],uv_grid_im_name[1024],uv_grid_counter_name[1024];
-     sprintf(uv_grid_re_name,"%s/uv_grid_real_%dx%d.fits",m_ImagerParameters.m_szOutputDirectory.c_str(),n_pixels,n_pixels);
-     sprintf(uv_grid_im_name,"%s/uv_grid_imag_%dx%d.fits",m_ImagerParameters.m_szOutputDirectory.c_str(),n_pixels,n_pixels);
-     sprintf(uv_grid_counter_name,"%s/uv_grid_counter_%dx%d.fits",m_ImagerParameters.m_szOutputDirectory.c_str(),n_pixels,n_pixels);
-    
-     if( uv_grid_real.WriteFits( uv_grid_re_name ) )
-     {
-        printf("ERROR : could not write output file %s\n",uv_grid_re_name);
-     }
-     else
-     {
-        PRINTF_INFO("INFO : saved file %s\n",uv_grid_re_name);
-     }
-
-     if( uv_grid_imag.WriteFits( uv_grid_im_name ) )
-     {
-        printf("ERROR : could not write output file %s\n",uv_grid_im_name);
-     }
-     else
-     {
-        PRINTF_INFO("INFO : saved file %s\n",uv_grid_im_name);
-     }
+  // ... Remaining code removed
   
-     if( uv_grid_counter.WriteFits( uv_grid_counter_name ) )
-     {
-        printf("ERROR : could not write output file %s\n",uv_grid_counter_name);
-     }
-     else
-     {
-        PRINTF_INFO("INFO : saved file %s\n",uv_grid_counter_name);
-     }
-  }
+  // Saving dirty_image() output files
+  // ... Remaining code removed
 
-  // Saving dirty_image() output files: 
-  char outDirtyImageReal[1024],outDirtyImageImag[1024];   
-   
-   if( bSaveIntermediate ){ // I will keep this if - assuming it's always TRUE, but there is still control using , if bSaveIntermediate=false it has priority over m_SaveFilesLevel
-      if( CPacerImager::m_SaveFilesLevel >= SAVE_FILES_DEBUG ){
-         sprintf(outDirtyImageReal,"%s/dirty_test_real_%dx%d.fits",m_ImagerParameters.m_szOutputDirectory.c_str(),uv_grid_counter_xSize,uv_grid_counter_ySize);
-         sprintf(outDirtyImageImag,"%s/dirty_test_imag_%dx%d.fits",m_ImagerParameters.m_szOutputDirectory.c_str(),uv_grid_counter_xSize,uv_grid_counter_ySize);
-   
-         out_image_real.WriteFits( outDirtyImageReal );
-         out_image_imag.WriteFits( outDirtyImageImag );
-      }
-   }
-   
-// .... Remaining code segment has been removed
+// ... Remaining code removed
+
 // gridding + imaging ends
 clock_t end_time = clock();
 double duration_sec = double(end_time-start_time)/CLOCKS_PER_SEC;
