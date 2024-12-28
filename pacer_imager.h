@@ -11,9 +11,9 @@
 using namespace std;
 
 // FFTW, math etc :
-// #include <fftw3.h>
+// #include <fftw3.h
 
-// for all cuda related stuff! 
+// for all cuda related stuff 
 #include <cuda_runtime_api.h>
 #include <cuda.h>
 #include "cufftw.h"
