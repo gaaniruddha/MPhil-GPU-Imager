@@ -1,22 +1,19 @@
 /* 
 Start date: 01/12/2022 
-Expected End date: 15/11/2022 
-Actual end date: 01/12/2022
+End date: 01/12/2022
 
-Header file for both gridding + cuFFT, implemented in cuda 
-- gridding_imaging_cuda
+Notes:
+- Has the gridding kernel defined in CUDA. 
 
 References: 
 https://stackoverflow.com/questions/17489017/can-we-declare-a-variable-of-type-cufftcomplex-in-side-a-kernel
-
 */
 
-// In order to include the gridding_gpu.cu 
+// For cuda related functions 
 #include <cuda.h> 
 #include "cuda_runtime.h"
 // So that it recognises: blockIdx
 #include "device_launch_parameters.h"
-
 
 // Cuda kernal: gridding and cuFFT 
 __global__ void gridding_imaging_cuda(float *u_cuda, float *v_cuda, 
