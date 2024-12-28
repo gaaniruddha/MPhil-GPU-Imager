@@ -13,12 +13,14 @@ Notes:
 #include <iostream>
 using namespace std; 
 #include <string.h> 
-#include "math.h"
+
+# For cuda stuff 
 #include <cuda.h> 
 #include "cuda_runtime.h"
 #include <time.h>
-
 #include "pacer_imager.h"
+
+// ... Remaining #include statments 
 #include "pacer_common.h"
 #include <bg_fits.h>
 
