@@ -22,8 +22,9 @@ using namespace std;
 #include "pacer_common.h"
 #include <bg_fits.h>
 
-// FFTW, math etc :
+// FFTW (for the CPU version of imager) 
 // #include <fftw3.h>
+
 #include <math.h>
 
 // local defines :
